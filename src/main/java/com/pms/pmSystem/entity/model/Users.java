@@ -1,5 +1,7 @@
 package com.pms.pmSystem.entity.model;
 
+import com.pms.pmSystem.entity.AbstractAuditableModel;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;

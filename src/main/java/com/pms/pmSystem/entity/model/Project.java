@@ -1,11 +1,16 @@
 package com.pms.pmSystem.entity.model;
 
 import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.List;
 
 import com.pms.pmSystem.entity.AbstractAuditableModel;
 
+import jakarta.persistence.CollectionTable;
 import jakarta.persistence.Column;
+import jakarta.persistence.ElementCollection;
 import jakarta.persistence.Entity;
+import jakarta.persistence.JoinColumn;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -70,4 +75,8 @@ public class Project extends AbstractAuditableModel {
 
     @Column(name = "PROJ_CONTRACT_PERIOD_DATE")
     private LocalDateTime proj_contract_period_date;
+
+    @CollectionTable(name = "PROJECT_ATTACHMENT", joinColumns=@JoinColumn(name = "ID"))
+    @ElementCollection
+    private List<Attachment> attachments = new ArrayList<>();
 }
