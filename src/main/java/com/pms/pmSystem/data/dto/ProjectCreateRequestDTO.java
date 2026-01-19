@@ -1,15 +1,8 @@
 package com.pms.pmSystem.data.dto;
 
 import java.time.LocalDateTime;
-import java.util.ArrayList;
 import java.util.List;
 
-import com.pms.pmSystem.entity.model.Attachment;
-
-import jakarta.persistence.CollectionTable;
-import jakarta.persistence.Column;
-import jakarta.persistence.ElementCollection;
-import jakarta.persistence.JoinColumn;
 import lombok.Data;
 
 @Data
@@ -17,7 +10,6 @@ public class ProjectCreateRequestDTO {
     public Long id;
 
     private String proj_name;
-
 
     private String proj_des;
 
@@ -56,5 +48,7 @@ public class ProjectCreateRequestDTO {
     private LocalDateTime proj_contract_period_date;
 
     private List<AttachmentDTO> attachments;
+
+    private Long createdBy;
 
 }

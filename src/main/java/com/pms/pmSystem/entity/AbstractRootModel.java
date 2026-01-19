@@ -18,7 +18,7 @@ public abstract class AbstractRootModel extends AbstractLogPrintableModel implem
 
     @Id
     @Column(name = "ID")
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @Column(name = "DELETED")
